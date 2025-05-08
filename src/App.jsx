@@ -3,8 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Card from "./components/TodosCard";
 import Loader from "./components/Loader";
 
-const firebaseUrl =
-  "https://todosapp-c5197-default-rtdb.asia-southeast1.firebasedatabase.app/";
+const firebaseUrl = import.meta.env.VITE_DATABASE_URL;
 function App() {
   let taskInput = useRef(null);
   let [todos, setTodos] = useState([]);
